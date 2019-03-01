@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import * as searchActions from 'actions/searchActions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 class SearchBar extends Component {
 	constructor(props){
@@ -8,7 +11,8 @@ class SearchBar extends Component {
 	}
 	onInputChange(event){
 		this.setState({ term: event.target.value });
-		this.props.onSearchTermChange(event.target.value);
+		// this.props.onSearchTermChange(event.target.value);
+		this.props.searchActions.searchVideo(event.target.value)
 	}
 
 	render() {
@@ -23,4 +27,8 @@ class SearchBar extends Component {
 	}
 }
 
-export default SearchBar;
+const mapDispatchToProps = dispatch => ({
+	searchActions: bindActionCreators(searchActions, dispatch),
+})
+
+export default connect(null, mapDispatchToProps)(SearchBar);

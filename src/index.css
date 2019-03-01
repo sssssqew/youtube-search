@@ -19,6 +19,7 @@
 }
 
 .list-group-item {
+	width: 30rem;
 	cursor: pointer;
 }
 
