@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoListItem = (props) => {
 	const video = props.video;
-	console.log(video);
+	//console.log(video);
 	const imageUrl = video.snippet.thumbnails.default.url;
 
 	return (

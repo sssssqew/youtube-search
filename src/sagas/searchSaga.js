@@ -15,7 +15,7 @@ let getYoutubeVideo = (key, term) => {
 function* searchVideo(action){
 	try{
 		const { keyword } = action;
-		console.log(keyword);
+		//console.log(keyword);
 		console.log(process.env.REACT_APP_API_KEY);
 
 		const data = yield call(getYoutubeVideo, process.env.REACT_APP_API_KEY, keyword);
