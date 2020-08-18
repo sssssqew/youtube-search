@@ -12,4 +12,4 @@ so it will not work if i use all quota.
 ```
 
 [demo page]
-https://clone-1275f.firebaseapp.com/
+https://clone-1275f.web.app/
